@@ -27,7 +27,7 @@
 		elseif($user[4]=='Seller')
 			{
 			setcookie("uname", $user[4], time()+3600, "/");
-			$_SESSION['uname']=$user[4];
+			$_SESSION['uname']=$user[0];
 			header('location: home.php');
 		}
 		}

@@ -33,7 +33,7 @@
 					
 					<tr rowspan="1" >
 						<td colspan="1"> <img src="a.jpg" width="200px" height="200px"> <br>
-						<center><h3> Tahmid Ratul </h3>
+						<center><h3><?=$_SESSION['uname']?></h3>
 						<p> Bangladesh </p></center>
 						</td>
 						<td colspan="7" align="center"> <h1><u> Upload Work </u></h1> <br>
