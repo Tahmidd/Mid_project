@@ -16,12 +16,10 @@ if(isset($_POST['signup'])){
 		
 
 		else{
-            //$_POST['name'] = $name;
-
 			$user = fopen('data.txt', 'a+');
 			$data=fwrite($user, "$uname"."|"."$email"."|"."$pass"."|"."$cpass"."|"."$utype"."\n");
 			
-	fclose($user);
+		fclose($user);
 		header('location: signin.php');
 	}
 			}
@@ -31,10 +29,10 @@ if(isset($_POST['signup'])){
 ?>
 
 
-<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
+	<title> REGISTRATION </title>
 </head>
 <body>
 	<center>

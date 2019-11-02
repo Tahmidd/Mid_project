@@ -1,6 +1,6 @@
 <?php
 	session_start();
-if(isset($_POST['login'])){
+    if(isset($_POST['login'])){
 		$email = $_POST['email'];
 		$pass = $_POST['pass'];
 		
@@ -10,7 +10,8 @@ if(isset($_POST['login'])){
 		}
 		else{
             $name='data.txt';
-	$read = fopen($name, 'r');
+		
+			$read = fopen($name, 'r');
 	
 		$fetch = fread($read, filesize($name));
 		fclose($read);
@@ -19,7 +20,7 @@ if(isset($_POST['login'])){
 		$user = explode("|", $line);
 	
 		if($user[1] == $email && $user[2] == $pass){
-				if($user[4]=='Admin'){
+			if($user[4]=='Admin'){
 			$_SESSION['uname']=$user[0];
 			header('location: AdminHome.php');
 		}
@@ -31,7 +32,6 @@ if(isset($_POST['login'])){
 		}
 		}
 		
-
      	}	
 	
 	}
@@ -42,10 +42,10 @@ if(isset($_POST['login'])){
 ?>
 
 
-<!DOCTYPE html>
+
 <html>
 <head>
-	<title></title>
+	<title> Login </title>
 </head>
 <body>
 	<center>
