@@ -1,9 +1,8 @@
 <?php
-
-
-
-
+	session_start();
+	if(isset($_SESSION['uname']) && isset($_COOKIE['uname'])){
 ?>
+
 
 
 <html>
@@ -68,3 +67,10 @@
 
 
 </html>
+
+<?php		
+	}else{
+		header('location: signin.php');
+	}
+
+?>

@@ -1,14 +1,15 @@
 <?php
 
 
-
-
+	session_start();
+	
+	if(isset($_SESSION['uname']) && isset($_COOKIE['uname'])){
 ?>
 
 
 <html>
 	<head>
-		<title>HomePage </title>
+		<title>Notifications </title>
 	</head>
 	
 	<body>
@@ -53,6 +54,11 @@
 </html>
 					
 					
-					
+<?php		
+	}else{
+		header('location: signin.php');
+	}
+
+?>					
 					
 					

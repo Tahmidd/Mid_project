@@ -1,14 +1,14 @@
 <?php
 
-
-
-
+	session_start();
+	
+	if(isset($_SESSION['uname']) && isset($_COOKIE['uname'])){
 ?>
 
 
 <html>
 	<head>
-		<title>HomePage </title>
+		<title>Earnings </title>
 	</head>
 	
 	<body>
@@ -81,7 +81,7 @@
 					<td>
 						<select>
 							
-							<option>Day</option>
+							<option>Week</option>
 							<option>Month</option>
 							<option>Year</option>
 						</select>
@@ -94,5 +94,11 @@
 	</html>
 						
 						
-						
+<?php		
+	}else{
+		header('location: signin.php');
+	}
+
+?>
+					
 						

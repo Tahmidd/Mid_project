@@ -1,0 +1,4 @@
+asdf|12@gmail.com|1234|1234|Seller
+as|tahmid@gmail.com|123|123|Admin
+habib|habib@gmail.com|1234|1234|Seller
+tahmid|tahmid1@gmail.com|1234|1234|Seller

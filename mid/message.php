@@ -1,24 +1,17 @@
 <?php
 
-
-		 if(isset($_POST['submit'])){
-		$chat = $_POST['text'];
-		
-		if(empty($chat) == true){
-			echo "write something";
-		}
-		else{
-            $_POST['text'] = $chat;
-            //echo "$chat";
-			}
-		}
-
+	session_start();
+	
+	if(isset($_SESSION['uname']) && isset($_COOKIE['uname'])){
 ?>
+
+
+
 
 
 <html>
 <head>
-	<title></title>
+	<title> Messages </title>
 </head>
 <body>
 
@@ -118,3 +111,11 @@
 	</center>
 </body>
 </html>
+
+
+<?php		
+	}else{
+		header('location: signin.php');
+	}
+
+?>
